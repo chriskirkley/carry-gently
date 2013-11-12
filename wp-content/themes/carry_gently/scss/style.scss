@@ -1,0 +1,133 @@
+/*!
+Theme Name: Carry Gently
+Theme URI:
+Description: The theme for Carry Gently. Warning, this theme is intended for use only by Carry Gently and requires a specific setup of WordPress.
+Author: Chris Kirkley/Design Inc
+Version: 1.0
+*/
+
+@import 'reset';
+@import 'fonts/proxima/fonts.css';
+
+@import "compass/css3/font-face";
+
+@import "singularitygs";
+@import "breakpoint";
+
+$grids: 2;
+$gutters: 0;
+
+$cg-red: #AB1B2C;
+$cg-green: #8CC63F;
+$cg-blue: #003563;
+
+*, *:before, *:after {
+	@include box-sizing('border-box');
+}
+.clear {
+	display: block;
+	width: 100%;
+	height: 0;
+	clear: both;
+}
+.more, .more a {
+	color: $cg-red;
+	font-style: italic;
+}
+body {
+	font-size: 10px;
+	font-size: 1rem;
+	overflow-x: hidden;
+	#page {
+		width: 980px;
+		margin: auto;
+		font-family: 'proxima_nova_rgregular';
+		color: #3C3C3B;
+		font-size: 1.6rem;
+		h1 {
+			font-family: 'proxima_novalight';
+			color: #003563;
+			font-size: 3rem;
+		}
+		// @include background-grid;
+		header#masthead {
+			@include grid-span(2);
+			overflow:visible;
+			padding:2em;
+			background-color: $cg-green;
+			height:300px;
+			box-shadow: -50rem 0 0 $cg-green, 50rem 0 0 $cg-green;
+			.carry {
+				font-family: 'proxima_novaextrabold';
+				color: #003563;
+				font-size: 3rem;
+			}
+			.gently {
+				font-family: 'proxima_novalight_italic';
+				color: #AB1B2C;
+				font-size: 3rem;
+			}
+			#strap-line {
+				@include grid-span(1);
+				p {
+					color: white;
+				}
+				.gently {
+					color:$cg-blue;
+					font-size: 5rem;
+				}
+				.carry {
+					color:$cg-blue;
+					font-size: 5rem;
+				}
+			}
+			#header-image {
+				@include grid-span(1,2);
+				overflow: visible;
+				img#croc {
+					max-width: 1500px;
+					margin-left:-340px;
+					margin-top: -20px;
+				}
+			}
+
+		}
+
+
+		#main.site-main {
+			@include grid-span(2);
+			.page-content {
+				@include grid-span(1);
+				padding: 2em;
+				border-right: 1px solid #ccc;
+			}
+			.page-slider {
+				@include grid-span(2);
+				background-color: $cg-red;
+				height: 400px;
+				clear: both;
+				padding: 2em;
+				box-shadow: -50rem 0 0 $cg-red, 50rem 0 0 $cg-red;
+				h1,p {
+					color: white;
+				}
+				p {
+					font-size: 1.4rem;
+				}
+			}
+			.page-foot-left {
+				@include grid-span(1);
+				height: 200px;
+				margin-right: 1px solid #ccc;
+				padding:2em;
+			}
+			.page-foot-right {
+				@include grid-span(1,2);
+				height: 200px;
+			}
+		}
+
+	}
+}
+
+
